@@ -1,4 +1,4 @@
-# Falling Squirrel
+# The Falling Squirrel
 This project started from a discussion with colleagues about what would happen if a squirrel free-fell from 1000 km. 
 Some argued that squirrel will burn from friction, other that it will not as it's very light and air drag will quickly slow it down.
 To find out the answer I decided to create web application that simulates this. 
