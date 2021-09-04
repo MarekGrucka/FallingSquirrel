@@ -1,0 +1,35 @@
+<div class="animationPanel" style="background-image: linear-gradient({{topColor}}, {{bottomColor}}  100%);">
+
+
+    <div class="row">
+        <div >
+            <p class ="outputControl">time {{time}}s</p>
+        </div>
+        <div >
+            <p class ="outputControl">altitude {{altitude}}m</p>
+        </div>
+        <div>
+            <p class ="outputControl">speed {{speed}}m/s</p>
+        </div>
+        <div>
+            <p class ="outputControl">Pressure {{actualPressure}}Pa</p>
+        </div>
+        <div>
+            <p class ="outputControl">densityOfAir {{densityOfAir}}g/cm3</p>
+        </div>
+        <div>
+            <p class ="outputControl">temperature {{temperature}}°C</p>
+        </div>
+        <div>
+            <p class ="outputControl">Squirrel temperature {{squirrelTemperature}}°C</p>
+        </div>
+
+        <mat-slider class ="timeMultiplierControl" [disabled] = "simulationInProgress" vertical min= "1" max="10" step="1" value="1" [(ngModel)]=timeMultiplier></mat-slider>
+<p class ="outputControl" >Time multiplier {{timeMultiplier}}x</p>
+
+    </div>
+
+    
+</div>
+
+

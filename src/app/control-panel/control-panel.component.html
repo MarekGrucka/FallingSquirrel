@@ -1,0 +1,25 @@
+
+<div class="controlPanel">
+<p>Altitude {{altitude/1000}}km</p>
+<mat-slider [disabled] = "simulationInProgress" tickInterval="1000" min="1000" max="1000000" step="1000" value="1000000" aria-label="units" [(ngModel)]="altitude"></mat-slider>
+
+<p>Temperature at the sea level {{temperature}}°C</p>
+<mat-slider [disabled] = "simulationInProgress" thumbLabel tickInterval="10" min="-50" max="50" step="1" value="20" [(ngModel)]="temperature"></mat-slider>
+
+<p>Air pressure at the at the sea level {{pressure/100}}kPa</p>
+<mat-slider [disabled] = "simulationInProgress" thumbLabel [displayWith]="formatPressureLabel" tickInterval="100" min="0" max="500000" step="1000" value="101325" [(ngModel)]="pressure"></mat-slider>
+
+<p>Gravitational acceleration = {{gravitationalAcceleration}} m/s²</p>
+<mat-slider [disabled] = "simulationInProgress" thumbLabel tickInterval="100" min="0" max="50" step="0.1" value="9.80665" [(ngModel)]=gravitationalAcceleration></mat-slider>
+
+<p>Squirrel coefficient of drag = {{squirrelCoefficientOfDrag}}</p>
+<mat-slider [disabled] = "simulationInProgress" thumbLabel tickInterval="1" min="0" max="2" step="0.05" value="0.98"[(ngModel)]=squirrelCoefficientOfDrag></mat-slider>
+
+<p>Squirrel mass = {{squirrelMass}}kg</p>
+<mat-slider [disabled] = "simulationInProgress" thumbLabel min="0.1" max="100" step="0.1" value="0.4"[(ngModel)]=squirrelMass></mat-slider>
+
+<hr>
+
+<button [disabled] = "simulationInProgress" mat-raised-button color="accent" (click)="onStartSimulation()">Start simulation</button>
+
+</div>
